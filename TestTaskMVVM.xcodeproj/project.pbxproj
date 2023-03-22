@@ -16,6 +16,7 @@
 		35EFDD2929CAEB88009514C7 /* TestTaskMVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFDD2829CAEB88009514C7 /* TestTaskMVVMUITestsLaunchTests.swift */; };
 		35EFDD4329CAEDCC009514C7 /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFDD4229CAEDCC009514C7 /* NetworkErrors.swift */; };
 		35EFDD4629CAF08B009514C7 /* OrderListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFDD4529CAF08B009514C7 /* OrderListTableVC.swift */; };
+		35EFDD4829CAF33F009514C7 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EFDD4729CAF33F009514C7 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		35EFDD2829CAEB88009514C7 /* TestTaskMVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTaskMVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		35EFDD4229CAEDCC009514C7 /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
 		35EFDD4529CAF08B009514C7 /* OrderListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderListTableVC.swift; sourceTree = "<group>"; };
+		35EFDD4729CAF33F009514C7 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		35EFDD3529CAEC2D009514C7 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				35EFDD4729CAF33F009514C7 /* Model.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EFDD4829CAF33F009514C7 /* Model.swift in Sources */,
 				35EFDD0629CAEB87009514C7 /* AppDelegate.swift in Sources */,
 				35EFDD0829CAEB87009514C7 /* SceneDelegate.swift in Sources */,
 				35EFDD4629CAF08B009514C7 /* OrderListTableVC.swift in Sources */,
