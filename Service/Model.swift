@@ -11,7 +11,7 @@ struct MainData: Codable {
     let id: Int
     let startAddress: Address
     let endAddress: Address
-    let Price: Price
+    let price: Price
     let orderTime: Date
     let car: Car
 }
