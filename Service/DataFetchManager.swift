@@ -8,15 +8,15 @@
 import Foundation
 
 protocol NetworkManagerProtocol {
-    func getList(complition: @escaping (Result<FullData, Error>) -> Void)
+    func getList(complition: @escaping (Result<MainData, Error>) -> Void)
 }
 
 final class NetworkManager: NetworkManagerProtocol {
     
     private let urlString = "https://www.roxiemobile.ru/careers/test/orders.json"
     
-    func getList(complition: @escaping (Result<FullData, Error>) -> Void) {
-        request(url: urlString) { (result: Result<FullData, Error>) in
+    func getList(complition: @escaping (Result<MainData, Error>) -> Void) {
+        request(url: urlString) { (result: Result<MainData, Error>) in
             switch result {
             case .success (let success):
                 DispatchQueue.main.async {
@@ -55,7 +55,7 @@ final class NetworkManager: NetworkManagerProtocol {
                     }
                 } catch {
                     DispatchQueue.main.async {
-                        complition(.failure((NetworkError.irconectData)))
+                        complition(.failure((NetworkError.incorrectData)))
                     }
                 }
             }

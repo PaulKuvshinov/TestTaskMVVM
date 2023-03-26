@@ -104,14 +104,14 @@
 			isa = PBXGroup;
 			children = (
 				35EFDD3529CAEC2D009514C7 /* Service */,
-				35EFDD3B29CAEC94009514C7 /* Resources */,
-				35EFDD3A29CAEC82009514C7 /* Errors */,
 				35EFDD3929CAEC7A009514C7 /* Support */,
 				35EFDD3829CAEC65009514C7 /* Extensions */,
 				35EFDD3729CAEC57009514C7 /* Modules */,
+				35EFDD3A29CAEC82009514C7 /* Errors */,
+				35EFDD3B29CAEC94009514C7 /* Resources */,
+				35EFDD3C29CAEC9D009514C7 /* Storyboard */,
 				35EFDD1B29CAEB88009514C7 /* TestTaskMVVMTests */,
 				35EFDD2529CAEB88009514C7 /* TestTaskMVVMUITests */,
-				35EFDD3C29CAEC9D009514C7 /* Storyboard */,
 				35EFDD0329CAEB87009514C7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -447,7 +447,8 @@
 				35EFDD1129CAEB88009514C7 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = Storyboard;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -574,12 +575,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestTaskMVVM/Info.plist;
+				INFOPLIST_FILE = "/Users/makar/Documents/Documents/Developer/SWIFT(New)/TestTaskMVVM/Support/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,12 +603,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestTaskMVVM/Info.plist;
+				INFOPLIST_FILE = "/Users/makar/Documents/Documents/Developer/SWIFT(New)/TestTaskMVVM/Support/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

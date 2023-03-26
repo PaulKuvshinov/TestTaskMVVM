@@ -7,13 +7,13 @@
 
 import Foundation
 
-struct MainData: Codable {
+struct FullData: Codable {
     let id: Int
     let startAddress: Address
     let endAddress: Address
     let price: Price
     let orderTime: Date
-    let car: Car
+    let vehicle: Vehicle
 }
 
 struct Address: Codable {
@@ -26,11 +26,11 @@ struct Price: Codable {
     let currency: String
 }
 
-struct Car: Codable {
-    let autoNumber: Int
-    let autoModel: String
-    let autoPhoto: String
-    let driver: String
+struct Vehicle: Codable {
+    let regNumber: String
+    let modelName: String
+    let photo: String
+    let driverName: String
 }
 
-typealias FullData = [MainData]
+typealias MainData = [FullData]

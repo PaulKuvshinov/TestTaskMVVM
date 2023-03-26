@@ -27,35 +27,38 @@ final class OrderListTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.nubmerOfRowInSection
+        return viewModel.numberOfRowInSection
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(OrderListTableViewCell.cell, forCellReuseIdentifier: "orderCell")
+        tableView.register(OrderListTableViewCell.self, forCellReuseIdentifier: "orderCell")
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell", for: indexPath) as? OrderListTableViewCell) else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "orderCell", for: indexPath) as? OrderListTableViewCell else {
             fatalError("Some error")
         }
         
-        let cellViewNodel = viewModel.returnCell(forindexPath: indexPath)
+        let cellViewModel = viewModel.returnCell(forIndexPath: indexPath)
         cell.viewModel = cellViewModel as? OrderListCellViewModel
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let vc = DetailViewController()
+        let vc = DetailVC()
         vc.viewModel = viewModel.returnDetailViewModel(indexPath: indexPath)
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    func showAlertError(withError: error) {
-        // дописать алерт
+    func showAlertError(withError error: String) {
+        let error = error
+        let allertController = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
+        allertController.addAction(UIAlertAction(title: "Try again", style: .default))
+        present(allertController, animated: true)
     }
     
     private func setupUI() {
         title = "Order list"
-        UINavigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.prefersLargeTitles = true
         tableView.separatorStyle = .none
         tableView.register(OrderListTableViewCell.self, forCellReuseIdentifier: "orderCell")
     }

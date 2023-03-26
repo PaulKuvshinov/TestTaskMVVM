@@ -9,14 +9,14 @@ import Foundation
 
 enum NetworkError: Error {
     case lostNetworkConnection
-    case irconectData
+    case incorrectData
     case serverError(error: Error)
 }
 
 extension NetworkError: LocalizedError {
         var errorDescription: String? {
         switch self {
-        case .irconectData:
+        case .incorrectData:
             return "Incorrect data"
         case .lostNetworkConnection:
             return "Lost network connection"

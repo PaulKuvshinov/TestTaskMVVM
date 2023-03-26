@@ -8,18 +8,18 @@
 import UIKit
 
 protocol DetailVCViewModelProtocol: AnyObject {
-    var order: MainData? { get }
+    var order: FullData? { get }
     var id: String { get }
     var imageManager: ImageManagerProtocol { get set }
 }
 
 final class DetailVCViewModel: DetailVCViewModelProtocol {
-    var order: MainData?
+    var order: FullData?
     var id: String
     var imageManager: ImageManagerProtocol = ImageManager()
     
-    init(order: MainData) {
+    init(order: FullData) {
         self.order = order
-        id = String(describing: order.car.autoPhoto)
+        id = String(describing: order.vehicle.photo)
     }
 }

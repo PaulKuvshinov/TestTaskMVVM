@@ -11,7 +11,7 @@ protocol ViewControllerViewModelProtocol: AnyObject {
     var numberOfRowInSection: Int { get }
     func returnCell(forIndexPath indexPath: IndexPath) -> OrderListCellViewModelProtocol?
     func getOrders(complition: @escaping (String) -> Void, successComplition: @escaping() -> Void)
-    func returnDetailViewModel(indexPath: IndexPath) -> DetailViewControllerViewModelProtocol?
+    func returnDetailViewModel(indexPath: IndexPath) -> DetailVCViewModelProtocol?
 }
 
 final class ViewControllerViewModel: ViewControllerViewModelProtocol {
@@ -21,7 +21,7 @@ final class ViewControllerViewModel: ViewControllerViewModelProtocol {
     
     var networkManager: NetworkManagerProtocol? = NetworkManager()
     
-    var orders: FullData?
+    var orders: MainData?
     
     func getOrders(complition: @escaping (String) -> Void, successComplition: @escaping () -> Void) {
         networkManager?.getList {[weak self] result in
@@ -51,6 +51,6 @@ final class ViewControllerViewModel: ViewControllerViewModelProtocol {
     func returnDetailViewModel(indexPath: IndexPath) -> DetailVCViewModelProtocol? {
         
         guard let order = orders else { return nil }
-        return DetailVCVIewModel(order: order[indexPath.row])
+        return DetailVCViewModel(order: order[indexPath.row])
     }
 }

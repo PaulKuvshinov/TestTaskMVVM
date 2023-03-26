@@ -8,12 +8,12 @@
 import UIKit
 
 protocol OrderListCellViewModelProtocol: AnyObject {
-    var orders: MainData { get set }
+    var orders: FullData { get set }
 }
 
 final class OrderListCellViewModel: OrderListCellViewModelProtocol {
     
-    var orders: MainData
+    var orders: FullData
     
     var startCityAddress: String {
         return orders.startAddress.city
@@ -42,7 +42,7 @@ final class OrderListCellViewModel: OrderListCellViewModelProtocol {
         return orderTime
     }
     
-    init(order: MainData) {
+    init(order: FullData) {
         orders = order
     }
 }
